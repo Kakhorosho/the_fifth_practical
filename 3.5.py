@@ -7,7 +7,7 @@ x = int(input())
 y = int(input())
 
 t.penup()
-t.goto(xc, yc)
+t.goto(xc, yc - r)
 t.pendown()
 t.circle(r)
 
