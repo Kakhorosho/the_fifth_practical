@@ -1,6 +1,4 @@
-n = int(input())
-m = int(input())
-k = int(input())
+n, m, k = map(int, input().split())
 if m - k > 1:
     a = m - k - 1
     b = (n - m) + (k - 1)
