@@ -8,8 +8,8 @@ y = int(input())
 
 fig, ax = plt.subplots()
 
-plt.xlim(xc + 80, xc - 80)
-plt.ylim(yc + 80, yc - 80)
+plt.xlim(xc - 80, xc + 80)
+plt.ylim(yc - 80, yc + 80)
 c = plt.Circle((xc, yc,), r, color='k', fill=False)
 dot = plt.Circle((x, y), 2, color='red')
 plt.grid(linestyle='dotted')
