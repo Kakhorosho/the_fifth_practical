@@ -1,17 +1,8 @@
-n, m, k = map(int, input().split())
-if m - k > 1:
-    a = m - k - 1
-    b = (n - m) + (k - 1)
-    if a <= b:
-        print(a)
-    else:
-        print(b)
-if k - m > 1:
-    a = k - m - 1
-    b = (n - k) + (m - 1)
-    if a <= b:
-        print(a)
-    else:
-        print(b)
-if abs(k - m) == 1:
-    print(0)
+n = int(input('Количество кнатов: '))
+sikl = n / 29
+gal = sikl / 17
+sikl_new = abs(int(gal) - gal)*17
+knat_new = abs(int(sikl_new) - sikl_new)*29
+print(f'Количество сиклей: {sikl:.3f}')
+print(f'Количество галлеонов: {gal:.3f}')
+print(f'Стоимость в размере {int(gal)} галлеонов, {int(sikl_new)} сиклей и {int(knat_new)} кнатов')

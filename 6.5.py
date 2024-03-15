@@ -1,17 +1,19 @@
-weight = float(input())
-height = float(input())
-bmi = weight / height
-if bmi < 16:
-    print('выраженный дефицит массы тела')
-elif 16 <= bmi <= 18.49:
-    print('недостаточная масса тела')
-elif 18.5 <= bmi <= 24.99:
-    print('норма')
-elif 25 <= bmi <= 29.99:
-    print('избыточная масса тела')
-elif 30 <= bmi <= 34.99:
-    print('ожирение первой степени')
-elif 35 <= bmi <= 39.99:
-    print('ожирение второй степени')
+f_year = int(input())
+s_year = int(input())
+t_year = int(input())
+if f_year == s_year or s_year == t_year or t_year == f_year:
+    if s_year == t_year:
+        if t_year == f_year:
+            print(3)
+        else:
+            print(2)
+    else:
+        if t_year == f_year:
+            print(2)
+        else:
+            if f_year == s_year:
+                print(2)
+            else:
+                print(1)
 else:
-    print('ожирение третьей степени')
+    print(0)

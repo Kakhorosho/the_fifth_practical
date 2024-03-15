@@ -1,29 +1,11 @@
-import matplotlib.pyplot as plt
+a = int(input())
+f_dgt = a % 10
+s_dgt = a // 10 % 10
+t_dgt = a // 100 % 10
+fo_dgt = a // 1000 % 10
+if 1000 <= a <= 9999:
+    if f_dgt == fo_dgt and s_dgt == t_dgt:
+        print('Настоящее')
+    else:
+        print('Кривое')
 
-xc = int(input())
-yc = int(input())
-r = int(input())
-x = int(input())
-y = int(input())
-
-fig, ax = plt.subplots()
-
-plt.xlim(xc - 80, xc + 80)
-plt.ylim(yc - 80, yc + 80)
-c = plt.Circle((xc, yc,), r, color='k', fill=False)
-dot = plt.Circle((x, y), 2, color='red')
-plt.grid(linestyle='dotted')
-
-ax.set_aspect(1)
-
-ax.add_artist(c)
-ax.add_artist(dot)
-
-if (x - xc)**2 + (y - yc)**2 < r**2:
-    plt.title('Точка внутри окружности', fontsize=8, color='red')
-elif (x - xc)**2 + (y - yc)**2 == r**2:
-    plt.title('Точка лежит на окружности', fontsize=8, color='red')
-else:
-    plt.title('Точка вне окружности', fontsize=8, color='red')
-
-plt.show()

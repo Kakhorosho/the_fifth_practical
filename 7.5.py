@@ -1,19 +1,17 @@
-f_year = int(input())
-s_year = int(input())
-t_year = int(input())
-if f_year == s_year or s_year == t_year or t_year == f_year:
-    if s_year == t_year:
-        if t_year == f_year:
-            print(2)
-        else:
-            print(1)
+n, m, k = map(int, input().split())
+if m - k > 1:
+    a = m - k - 1
+    b = (n - m) + (k - 1)
+    if a <= b:
+        print(a)
     else:
-        if t_year == f_year:
-            print(1)
-        else:
-            if f_year == s_year:
-                print(1)
-            else:
-                print(0)
-else:
+        print(b)
+if k - m > 1:
+    a = k - m - 1
+    b = (n - k) + (m - 1)
+    if a <= b:
+        print(a)
+    else:
+        print(b)
+if abs(k - m) == 1:
     print(0)

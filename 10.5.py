@@ -1,16 +1,12 @@
-s, f, g = map(int, input().split())
-if s >= f and s >= g:
-    if f >= g:
-        print(s, f, g)
-    elif f < g:
-        print(s, g, f)
-elif f >= s and f >= g:
-    if s >= g:
-        print(f, s, g)
-    elif s < g:
-        print(f, g, s)
-elif g >= f and g >= s:
-    if f >= s:
-        print(g, f, s)
-    elif f < s:
-        print(g, s, f)
+a = int(input())
+f_dgt = a % 10
+s_dgt = a // 10 % 10
+t_dgt = a // 100 % 10
+fo_dgt = a // 1000 % 10
+if a // 1000 < 10 and f_dgt != s_dgt != t_dgt != fo_dgt:
+    if 1900 <= a <= 2050:
+        print('ERROR')
+    else:
+        print('OK')
+else:
+    print('ERROR')

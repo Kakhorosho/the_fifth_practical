@@ -1,8 +1,16 @@
-n = int(input('Количество кнатов: '))
-sikl = n / 29
-gal = sikl / 17
-sikl_new = abs(int(gal) - gal)*17
-knat_new = abs(int(sikl_new) - sikl_new)*29
-print(f'Количество сиклей: {sikl:.3f}')
-print(f'Количество галлеонов: {gal:.3f}')
-print(f'Стоимость в размере {int(gal)} галлеонов, {int(sikl_new)} сиклей и {int(knat_new)} кнатов')
+s, f, g = map(int, input().split())
+if s >= f and s >= g:
+    if f >= g:
+        print(s, f, g)
+    elif f < g:
+        print(s, g, f)
+elif f >= s and f >= g:
+    if s >= g:
+        print(f, s, g)
+    elif s < g:
+        print(f, g, s)
+elif g >= f and g >= s:
+    if f >= s:
+        print(g, f, s)
+    elif f < s:
+        print(g, s, f)

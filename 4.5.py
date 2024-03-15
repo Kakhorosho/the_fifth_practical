@@ -1,10 +1,12 @@
 a = int(input())
-f_dgt = a % 10
-s_dgt = a // 10 % 10
-t_dgt = a // 100 % 10
-fo_dgt = a // 1000 % 10
-if 1000 <= a <= 9999:
-    if f_dgt == fo_dgt and s_dgt == t_dgt:
-        print('Настоящее')
+if a <= 100:
+    if a % 10 == 1 and a != 11:
+        print(f'{a} попугай')
+    elif 5 <= a <= 20 or 25 <= a <= 30 or 35 <= a <= 40 or 45 <= a <= 50:
+        print(f'{a} попугаев')
+    elif 55 <= a <= 60 or 65 <= a <= 70 or 75 <= a <= 80 or 85 <= a <= 90:
+        print(f'{a} попугаев')
+    elif 95 <= a <= 100:
+        print(f'{a} попугаев')
     else:
-        print('Кривое')
+        print(f'{a} попугая')
